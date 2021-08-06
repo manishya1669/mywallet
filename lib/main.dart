@@ -9,9 +9,9 @@ import 'package:fourth/widget/routes.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: "/home",
+    initialRoute: "/homes",
     routes: {
-      "/home": (context) => HomePage(),
+      "/homes": (context) => HomePage(),
       Myroutes.iconroute: (context) => IconsDetails(),
       Myroutes.indigoroute: (context) => Indigo(),
     },
