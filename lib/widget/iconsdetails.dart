@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fourth/widget/Appcard.dart';
+import 'package:share/share.dart';
+
+// ignore: must_be_immutable
 
 class IconsDetails extends StatelessWidget {
-  const IconsDetails({Key? key}) : super(key: key);
+  // String text = "";
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,10 @@ class IconsDetails extends StatelessWidget {
                               color: Colors.indigo[400],
                               //decoration: BoxDecoration(),
                               child: InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Share.share("Flutter in nice");
+                                  Text("Sent");
+                                },
                               )),
                         ),
                       ),
@@ -101,6 +107,16 @@ class IconsDetails extends StatelessWidget {
                               )),
                         ),
                       ),
+                      Container(
+                        child: AppCard(
+                          child: Container(
+                            height: 50,
+                            width: 70,
+                            color: Colors.white,
+                            child: Text("hi"),
+                          ),
+                        ),
+                      )
                     ]))
           ]),
         ));
